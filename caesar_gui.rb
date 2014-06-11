@@ -75,18 +75,22 @@ Shoes.app title: "CAESAR CIPHER v1.0" do
 	end
 
 	stack do
-		@description = para "This is what a Caesar Cipher does, blah blah motherfucking blah!"
+		@description = para "To encrypt your message enter a maxiumum offset of 25. For a full description of what a Caesar Cipher is read the following article ",
+		@link = link('Wikipedia Article', :click => 'http://en.wikipedia.org/wiki/Caesar_cipher')
 		@description.style(align:'center')
+		@link.style(align:'center')
+
 	
 	
 		@button = button "Encrypt Text" do
 			input = ask "Enter text:"
+			off = ask "Enter offset:"
 			raw_message=Caesar.new(input)
 				stack do
 					@orig_headline = para "Your original message"
 					para input
-					@trans_headline = para "Your encrypted message"
-					para raw_message.transform(5)
+					@trans_headline = para "Your encrypted message shifted by #{off.to_i}"
+					para raw_message.transform(off.to_i)
 
 					@orig_headline.style(align:'center', underline:'single', weight:'bold', stroke: darkred)
 					@trans_headline.style(align:'center', underline:'single', weight:'bold', stroke:dodgerblue)
@@ -95,12 +99,13 @@ Shoes.app title: "CAESAR CIPHER v1.0" do
 
 		@button = button "Unencrypt Text" do
 			input = ask "Enter text:"
+			off = ask "Enter offset:"
 			raw_message=Caesar.new(input)
 				stack do
 					@orig_headline = para "Your encrypted message"
 					para input
-					@trans_headline = para "Your decoded message"
-					para raw_message.untransform(5)
+					@trans_headline = para "Your decoded message shifted by #{off.to_i}"
+					para raw_message.untransform(off.to_i)
 
 					@orig_headline.style(align:'center', underline:'single', weight:'bold', stroke: darkred)
 					@trans_headline.style(align:'center', underline:'single', weight:'bold', stroke:dodgerblue)
