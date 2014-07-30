@@ -17,9 +17,9 @@ class Armor
   end
 
   def heavy_armor
-    @add_agi = 0.0
-    @add_str = 0.0
-    @add_def = 0.0
+    @add_agi = -0.05
+    @add_str = -10
+    @add_def = 10
     @name= 'Bronze Armor'
   end
 
@@ -31,9 +31,9 @@ class Armor
   end
 
   def light_armor
-    @add_agi = 0.0
-    @add_str = 0.0
-    @add_def = 0.0
+    @add_agi = 0.05
+    @add_str = 10
+    @add_def = -10
     @name= 'Bronze Armor'
   end
 

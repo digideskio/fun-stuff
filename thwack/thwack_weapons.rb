@@ -18,23 +18,23 @@ class Weapons
   end
 
   def heavy_weapon
-      @add_agi = 0
-      @add_str = 25
-      @add_def = 15
+      @add_agi = -0.05
+      @add_str = 15
+      @add_def = -15
       @name = "Club"
   end
 
   def medium_weapon
-    @add_agi = 0.01
-    @add_str = 15
-    @add_def = 25
+    @add_agi = 0
+    @add_str = 0
+    @add_def = 0
     @name = "Katana"
   end
 
   def light_weapon
     @add_agi = 0.05
-    @add_str = 5
-    @add_def = -25
+    @add_str = 15
+    @add_def = -15
     @name = "Dagger"
   end
 
