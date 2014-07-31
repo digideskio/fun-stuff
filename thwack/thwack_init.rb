@@ -10,6 +10,8 @@ require './thwack_armor.rb'
 extend self
 
 def start
+  splash_screen
+  
   player1=nil
   player2=nil
   i=1
@@ -72,15 +74,6 @@ def self.splash_screen
   puts "****************************************"
   sleep(0.25)
 
-  puts "\n\n\nTO START GAME: Enter 1"
-  puts "RULES/HELP: Enter 2\n"
-  puts "-->    "
-  begin
-    valid = [1,2]
-    choice = gets.chomp
-  rescue
-    puts "Invalid selection. Please enter 1 or 2"
-  end
 end
 
 

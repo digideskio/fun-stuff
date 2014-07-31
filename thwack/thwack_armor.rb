@@ -20,7 +20,7 @@ class Armor
     @add_agi = -0.05
     @add_str = -10
     @add_def = 10
-    @name= 'Bronze Armor'
+    @name= 'Iron Armor'
   end
 
   def medium_armor
@@ -34,7 +34,7 @@ class Armor
     @add_agi = 0.05
     @add_str = 10
     @add_def = -10
-    @name= 'Bronze Armor'
+    @name= 'Leather Armor'
   end
 
 

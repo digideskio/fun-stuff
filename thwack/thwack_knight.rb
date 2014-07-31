@@ -9,10 +9,10 @@ class Knight
   attr_accessor :hp,  :str, :def, :agi, :connected, :agi, :connected, :atk_mult, :def_mult, :name
 
   def initialize
-    @hp = 1000
+    @hp = 400
     @str = 100
-    @def = 100 
-    @agi = 100
+    @def = 15 
+    @agi = 0.5
     @connected = false
     @atk_mult = 0
     @def_mult = 0

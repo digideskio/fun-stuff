@@ -8,9 +8,9 @@ class Ninja
   
   def initialize
     @hp = 325 #hit points
-    @str = 50  #base attack
-    @def = 75 #base defense
-    @agi = 0.75 #chance that an attack lands
+    @str = 80  #base attack
+    @def = 20 #base defense
+    @agi = 0.65 #chance that an attack lands
     @connected = false #did the player's attack connect?
     @atk_mult = 0 #increases when player connects on consecutive turns
     @def_mult = 0

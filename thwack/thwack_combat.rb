@@ -33,7 +33,7 @@ module Combat
 
     if self.def_mult == 0
         self.def_mult += 1
-        return self.hp -= (atk_points * base_def).round
+        return self.hp -= ((atk_points * base_def) - self.def).round
       elsif self.def_mult == 1
         self.def_mult += 1
         return self.hp -= (atk_points * one_block).round
@@ -59,6 +59,9 @@ module Combat
     end
   end
 
+  #Each weapon has an effect on the warrior's base abilities.
+  #Equipping light armor may lower your total HP, but increase strength
+  #Equipping heavy weapon will lower agility and defense, but increase strength
   def equip(weapon,armor)
     self.str += weapon.add_str
     self.agi += weapon.add_agi

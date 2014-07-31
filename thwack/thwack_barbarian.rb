@@ -11,8 +11,8 @@ class Barbarian
   def initialize
     @hp = 550 #hit points
     @str = 115  #base attack
-    @def = 50 #base defense
-    @agi = 0.25 #chance that an attack lands, in this case 25%
+    @def = 10 #base defense
+    @agi = 0.40 #chance that an attack lands, in this case 25%
     @connected = false #did the player's attack connect?
     @atk_mult = 0 #increases when player connects on consecutive turns
     @def_mult = 0
