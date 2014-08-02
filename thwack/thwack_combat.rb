@@ -132,8 +132,10 @@ module Combat
         puts "************************************************"
         puts "#{@current_player.name} has won!!!"
         puts "Duration: #{counter - 1} moves"
-        puts "Winner: #{@current_player.list_attr}"
-        puts "Loser: #{@current_opponent.list_attr}"
+        print "\nWinner: "
+        puts " #{@current_player.list_attr}"
+        print "Loser: " 
+        puts "#{@current_opponent.list_attr}"
         puts "************************************************\n\n\n"
     end
   end
