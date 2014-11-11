@@ -36,6 +36,4 @@ class Armor
     @add_def = -10
     @name= 'Leather Armor'
   end
-
-
 end
