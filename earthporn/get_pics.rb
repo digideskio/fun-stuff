@@ -44,3 +44,7 @@ class GetEarthPorn
       response
     end
 end
+
+e = GetEarthPorn.new
+e.get_pics
+e.save_to_disk
