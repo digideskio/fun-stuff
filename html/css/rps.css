@@ -1,7 +1,60 @@
 body{
   background-image: url(../img/rps.png);
+  font-family: 'Chivo', sans-serif;
 }
 
 main{
   text-align: center;
+  margin: 5% 20%
+}
+
+button{
+  background-color: #6A6D6E;
+  color: white;
+  border: none;
+  border-bottom: 2px solid black;
+  border-right: 1px solid black;
+  cursor: pointer;
+  width: 150px;
+  height:75px;
+  transition: background-color 1s, color 0.5s, transform 1s;
+
+  font-size: 20px;
+}
+
+button:hover{
+  background-color: #47494A;
+  color: yellow;
+  font-size: 25px;
+  transform: rotateZ(360deg);
+}
+
+.tallys{
+  width: 100px;
+  height: 75px;
+  background-color: black;
+  color:white;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+#player-score,#computer-score{
+  font-size: 30px;
+  color:red;
+  margin-top:0;
+
+}
+
+#computer-tally{
+  float:right;
+
+}
+#player-tally{
+  float:left;
+
+}
+
+section{
+  display: inline-block;
 }
