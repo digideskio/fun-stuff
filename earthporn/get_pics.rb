@@ -9,10 +9,12 @@ class GetEarthPorn
   attr_reader :picture_array
 
   def initialize
-    @picture_array = []
+    @picture_array = [] #this will hold the URL of each submission
   end
 
   def get_pics
+    #navigate thru API to get URL from each submission
+    #if the URL doesn't contain 'jpg' or 'jpeg' it won't be saved to array
     server_response = get("http://www.reddit.com/r/EarthPorn/.json?limit=10")['data']['children']
     server_response.each do |image|
       if image["data"]["url"].include?("jpg") || image["data"]["url"].include?("jpeg")
