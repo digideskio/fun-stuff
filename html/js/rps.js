@@ -19,51 +19,43 @@ $(document).ready(function(){
     //win conditions
     if (playerChoice === "rock"){
       if (computerChoice === "rock"){
-        alert("Computer chose rock...TIE!");
+        swal("Computer chose rock...TIE!");
       }else if (computerChoice === "paper"){
-        alert("Computer chose paper...YOU LOSE!");
+        swal("Computer chose paper...YOU LOSE!");
         computerWinTally += 1;
         updateScores(playerWinTally,computerWinTally);
       }else if(computerChoice === "scissors"){
-        alert("Computer chose scissors...YOU WIN!");
+        swal("Computer chose scissors...YOU WIN!");
         playerWinTally +=1;
         updateScores(playerWinTally,computerWinTally);
       }
 
     }else if (playerChoice === "paper"){
       if (computerChoice === "rock"){
-        alert("Computer chose rock...YOU WIN!");
+        swal("Computer chose rock...YOU WIN!");
         playerWinTally +=1;
         updateScores(playerWinTally,computerWinTally);
       }else if (computerChoice === "paper"){
-        alert("Computer chose paper...TIE!");
+        swal("Computer chose paper...TIE!");
       }else if(computerChoice === "scissors"){
-        alert("Computer chose scissors...YOU LOSE!");
+        swal("Computer chose scissors...YOU LOSE!");
         computerWinTally += 1;
         updateScores(playerWinTally,computerWinTally);
       }
 
     }else if (playerChoice === "scissors"){
       if (computerChoice === "rock"){
-        alert("Computer chose rock...YOU LOSE!")
+        swal("Computer chose rock...YOU LOSE!")
         computerWinTally += 1;
         updateScores(playerWinTally,computerWinTally);
       }else if (computerChoice === "paper"){
-        alert("Computer chose paper...YOU WIN!")
+        swal("Computer chose paper...YOU WIN!")
         playerWinTally +=1
         updateScores(playerWinTally,computerWinTally);
       }else if(computerChoice === "scissors"){
-        alert("Computer chose scissors...TIE!")
+        swal("Computer chose scissors...TIE!")
       }
     }
-
-
-    console.log("Computer chooses " + computerChoice);
-    console.log("Player chooses " + playerChoice);
-    console.log("Player tally " + playerWinTally);
-    console.log("Computer tally " + computerWinTally);
-
-
   })
 
   //Next we must take care of the computer selection
