@@ -1,0 +1,12 @@
+#tab_example{
+  color:black;
+  margin-top: 10px
+}
+
+#tab_example a, a:visited{
+  color:black;
+}
+
+#tab_example a:hover{
+  color:white;
+}

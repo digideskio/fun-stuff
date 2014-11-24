@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html ng-app = "store">
 <head>
-  <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="./bootstrap/css/custom.css">
 </head>
 <body ng-controller="StoreController as store">
-  <div ng-repeat="product in store.products">
+  <div ng-repeat="product in store.products | orderBy:'-price'" ng-hide="product.soldOut">
     <h1>{{product.name}}</h1>
-    <h2>{{product.price}} </h2>
-    <p>{{product.description}}</p>
+    <h2>{{product.price | currency}} </h2>
+    <!-- <p>{{product.description}}</p> -->
+    <img ng-src="{{product.images[0].full}}">
+    <img ng-src="{{product.images[1].thumb}}">
     <button ng-show = "product.canPurchase">Add to Cart</button>
+
+    <section id="tab_example" ng-init="tab=1" ng-controller="PanelController as panel">
+      <ul class="nav nav-pills">
+        <li ng-class="{active:tab === 1}"><a href ng-click="tab = 1">Description</a></li>
+        <li ng-class="{active:tab === 2}"><a href ng-click="tab = 2">Specs</a></li>
+        <li ng-class="{active:tab === 3}"><a href ng-click="tab = 3">Reviews</a></li>
+      </ul>
+      <div class="panel" ng-show="tab === 1">
+        <blockquote>{{product.description}}</blockquote>
+      </div>
+
+      <div class="panel" ng-show="tab === 2">
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
+      </div>
+
+      <div class="panel" ng-show="tab === 3">
+        <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. </blockquote>
+      </div>
+
+    </section>
   </div>
 
   <script type="text/javascript" src="angular.min.js"></script>
