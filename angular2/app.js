@@ -1,1 +1,1 @@
-app.js
+alert('hello');
