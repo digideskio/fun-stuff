@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>Some Angular Shit Goes Here</title>
+  <script src="angular.js"></script>
+  <script type="text/javascript" src="angular-resource.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <link rel="stylesheet" type="text/css" href="angular2.css">
+</head>
+
+
+<body ng-controller="myController as glenn">
+  <h1>Sup babay?!</h1>
+<!--   {{myValue}}<br>
+  <input type="text" ng-model="myValue"><br/>
+  Singular gem property name: {{glenn.gem.name}}<br>
+  Singular gem property color: {{glenn.gem.color}}
+-->
+
+  <div ng-view></div>
+
+  <div ng-repeat="post in glenn.posts | orderBy:'-id'| filter:myValue">
+    <h2>{{post.name}}</h2>
+    <p>{{post.content}}</p>
+  </div>
+</body>
+
+
+</html>

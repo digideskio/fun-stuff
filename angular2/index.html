@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html>
+
+
 <head>
-  <title>Some Angular Shit Goes Here</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Counters App</title>
+  <script src="angular.js"></script>
+  <script type="text/javascript" src="angular-resource.js"></script>
+  <script type="text/javascript" src="angular-route.js"></script>
   <script type="text/javascript" src="app.js"></script>
   <link rel="stylesheet" type="text/css" href="angular2.css">
 </head>
-<body ng-controller="myController as glenn">
-  <h1>Sup babay?!</h1>
-  {{myValue}}<br>
-  <input type="text" ng-model="myValue"><br/>
-  Singular gem property name: {{glenn.gem.name}}<br>
-  Singular gem property color: {{glenn.gem.color}}
-  <!-- {{myController.name}} -->
 
-  <div ng-repeat="post in glenn.posts | orderBy:'-id'| filter:myValue">
-    <h2>{{post.name}}</h2>
-    <p>{{post.content}}</p>
-  </div>
+
+<body ng-app="myCountersApp">
+  <div ng-view></div>
 </body>
+
+
 </html>
