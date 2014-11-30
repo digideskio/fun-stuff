@@ -1,0 +1,18 @@
+body{
+  margin:0px 50px;
+  padding: 50px;
+}
+
+#header-pic{
+  margin: auto;
+  /*border:solid black;*/
+  display:block;
+  height:25%;
+  width: 25%;
+}
+
+.price{
+  font-size: large;
+  font-weight:bold;
+  color:red;
+}
