@@ -12,11 +12,11 @@
 
     var kendamas = [
       {"name": "KendamaUSA",
-       "color": "purple",
-       "price": 20.50},
+       "color": "multi",
+       "price": 20.51},
        {"name": "Mugen Musou",
        "color": "pink",
-       "price": 99.88
+       "price": 99.90
        },
        {"name": "BLK White Out",
        "color": "black/white",

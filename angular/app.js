@@ -18,7 +18,7 @@
 
     },
     {
-      name: "Pentagonal Gem",
+      name: "fuck you",
       price: 5.955,
       description: "It's a pentagon!",
       canPurchase: false,
