@@ -16,6 +16,6 @@ Blog = angular.module("Blog", ['ngRoute'])
 
 Blog.config(['$routeProvider', ($routeProvider) ->
   $routeProvider.when('/post', {templateURL: '../assets/mainPost.html', controller: 'PostCtrl'})
-  $routeProvider.otherwise({templateURL:'..assets/mainIndex.html', controller: 'IndexCtrl'})
+  $routeProvider.otherwise({templateURL:'../assets/mainIndex.html', controller: 'IndexCtrl'})
 
 ])
