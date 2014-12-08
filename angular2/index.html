@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 
 
 <head>
   <meta charset="UTF-8">
   <title>Counters App</title>
-  <script src="angular.js"></script>
-  <script type="text/javascript" src="angular-resource.js"></script>
-  <script type="text/javascript" src="angular-route.js"></script>
-  <script type="text/javascript" src="app.js"></script>
-  <link rel="stylesheet" type="text/css" href="angular2.css">
+  <script src="bower_components/angular/angular.js"></script>
+  <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+  <script type="text/javascript" src="js/angular-route.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/angular2.css">
 </head>
 
 
-<body ng-app="myCountersApp">
+<body ng-controller="myController">
   <div ng-view></div>
 </body>
 
