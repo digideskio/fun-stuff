@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="presidentsApp">
+
+<head>
+  <title>Great American Presidents</title>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/presidentsCtrl.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body ng-controller="presidentsController">
+  <div class="president" ng-repeat="president in presidents">
+    {{president.name}}
+  </div>
+
+  <form ng-submit="addPresident(newPresident.name)">
+    <input type="text" autofocus placeholder="Add your President!"ng-model="newPresident.name">
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+
+</html>

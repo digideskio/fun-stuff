@@ -1,0 +1,86 @@
+@import url(http://fonts.googleapis.com/css?family=IM+Fell+English:400,400italic);
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section { display:block; zoom:1; }
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+  font-family: "IM Fell English", Georgia, "Times New Roman";
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 15px;
+  color: #262626;
+}
+
+.government {
+  display: block;
+  color: white;
+  text-align: center; 
+  background: #262626;
+  padding: 2em;
+}
+
+.government h1, .government textarea, .government textarea:focus { 
+  outline: none;
+  font-family: "IM Fell English", Georgia, "Times New Roman";
+  font-size: 16px;
+  line-height: 1.5;
+  background: transparent;
+  border: none;
+  resize: none;
+  color: white;
+  text-align: center;
+  font-size: 4.2em; 
+  line-height: 1.1; 
+  font-style: normal;
+}
+
+h2 { font-size: 2.4em; }
+h4 { font-size: 1.6em; font-style: italic; }
+
+
+#presidents {
+  padding: 6em 1em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.president {
+  margin: 0 auto;
+}
+
+form { text-align: left; }
+label { display:block; margin: 1em; }
+input {
+  display: inline-block;
+  padding: 0.382em;
+  border: none;
+  font-family: "IM Fell English", Georgia, "Times New Roman";
+  font-size: 1.6em; 
+  font-style: italic; 
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type=submit]{
+  margin: 1rem auto;
+  background: black;
+  width: 50%;
+  color: white;
+}
+
+.president a.remove {
+  color: silver;
+  margin-left: 1em;
+  display: inline-block;
+}
+
+form input {
+  width: 100%;
+  border: dashed gray;
+  width: 50%;
+  margin: 20px;
+}
