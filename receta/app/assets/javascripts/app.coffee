@@ -1,6 +1,6 @@
 receta = angular.module('receta',[
   "templates",
-  "ng-Route",
+  "ngRoute",
   "controllers"
   ])
 
