@@ -3,29 +3,34 @@
 <head>
   <title>TTT</title>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
   <script type="text/javascript" src="js/tttCtrl.js"></script>
+  <script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body ng-controller="tttController">
 
+<div id="player-name"></div>
+
 <div class="row">
-  <div class="box" id="1" ng-click="startGame()" ng-style="{'background-color':myStyle}">{{box1}}</div>
-  <div class="box" id="2">2</div>
-  <div class="box" id="3">3</div>
+  <div class="box" id="1" ng-click="fillBox($event)" data="1">1</div>
+  <div class="box" id="2" ng-click="fillBox($event)" data="2">2</div>
+  <div class="box" id="3" ng-click="fillBox($event)" data="3">3</div>
 </div>
 
 <div class="row">
-  <div class="box" id="4">4</div>
-  <div class="box" id="5">5</div>
-  <div class="box" id="6">6</div>
+  <div class="box" id="4" ng-click="fillBox($event)" data="4">4</div>
+  <div class="box" id="5" ng-click="fillBox($event)" data="5">5</div>
+  <div class="box" id="6" ng-click="fillBox($event)" data="6">6</div>
 </div>
 
 <div class="row">
-  <div class="box" id="7">7</div>
-  <div class="box" id="8">8</div>
-  <div class="box" id="9">9</div>
+  <div class="box" id="7" ng-click="fillBox($event)" data="7">7</div>
+  <div class="box" id="8" ng-click="fillBox($event)" data="8">8</div>
+  <div class="box" id="9" ng-click="fillBox($event)" data="9">9</div>
 </div>
+
+<button ng-click="startGame()">Start Game</button>
 
 
 </body>

@@ -24,8 +24,31 @@ class Blender
   end
 
   def blend(ingredients)
-    ingredients.shuffle if blender_on == true
-  end
+    if blender_on
+      ingredients.shuffle
+    end
 
+    blender_on ? ingredients.shuffle : nil
+
+    ingredients.shuffle unless (blender_on == false)
+    ingredients.shuffle unless !blender_on
+    ingredients.shuffle if blender_on
+    ingredients.shuffle if blender_on == true
+
+
+  end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
 

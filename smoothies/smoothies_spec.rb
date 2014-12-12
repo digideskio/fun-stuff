@@ -1,4 +1,4 @@
-require_relative 'smoothies'
+  require_relative 'smoothies'
 
 describe Blender do
   before(:each) do
