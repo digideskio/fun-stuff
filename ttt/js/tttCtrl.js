@@ -4,13 +4,13 @@ angular
 
     var player1  = new Player();
     var computer = new Computer();
-    var currentPlayer = computer;
+    var currentPlayer = player1;
     var boxes = document.getElementsByClassName("box");
     var winner = false;
 
     var keepTrack = [];
     
-    console.log(boxes)
+    console.log(boxes);
 
     $scope.startGame = function(){
       player1.name = prompt("Enter your name foo!");
@@ -21,14 +21,28 @@ angular
     }
 
     $scope.fillBox = function(obj){
+      console.log(obj);
       var dataValue = obj.srcElement.attributes.data.value;
-      var boxToChange = document.getElementById("" + dataValue);
+      var boxToChange = document.getElementById(dataValue);
       boxToChange.style.backgroundColor = currentPlayer.color
+      // boxToChange.style.backgroundImage = "url(" + currentPlayer.img + ")";
+      // boxToChange.innerHTML = currentPlayer.gamePiece
+      console.log(currentPlayer.img)
       // this.myStyle=currentPlayer.color;
 
       // currentPlayer = new Player();
       // console.log(currentPlayer)
-      return "X";
+      switchPlayer();
+
+    }
+
+    function switchPlayer(){
+      if (currentPlayer == player1){
+        currentPlayer = computer;
+      }else{
+        currentPlayer = player1;
+      }
+
     }
 
     
