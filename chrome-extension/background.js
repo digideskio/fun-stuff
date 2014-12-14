@@ -3,7 +3,10 @@
 var host = window.location.host;
 
 //hide ESPN comments
-host === "espn.go.com" ? hideEspnComments() : null;
+
+if (host === "espn.go.com"){
+  hideEspnComments();
+}
 
 //highligting questions/answers on StackOverflow
 if (host === "stackoverflow.com" || host === "www.stackoverflow.com"){
@@ -12,9 +15,11 @@ if (host === "stackoverflow.com" || host === "www.stackoverflow.com"){
 
 //hide YouTube comments
 if (host === "www.youtube.com" || host === "youtube.com"){
-  alert("youtube true")
-  hideYouTubeComments()
+  alert("youtube true");
+  hideYouTubeComments();
 }
+
+///////////////functions and whatnot///////////////
 
 function hideEspnComments(){
   $("#comments").hide();
@@ -31,7 +36,8 @@ function stackOverflowEnhance(){
     "border":"red solid"
   });
 
-  function hideYouTubeComments(){
-    $("body").css({"background-color":"black"});
-  }
+}
+
+function hideYouTubeComments(){
+  $("body").css({"background-color":"black"});
 }

@@ -3,12 +3,12 @@
       this.color = 'blue';
       this.name = "";
       this.img = "./img/x.png";
-      this.gamePiece = "X"
+      this.gamePiece = "X";
     }
 
     function Computer(){
       this.color = 'red';
-      this.name = 'Computer'
+      this.name = 'Computer';
       this.img = "./img/x.png";
-      this.gamePiece = "O"
+      this.gamePiece = "O";
     }

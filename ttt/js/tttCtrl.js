@@ -6,9 +6,9 @@ angular
     var computer = new Computer();
     var currentPlayer = player1;
     var boxes = document.getElementsByClassName("box");
-    var winner = false;
+    //var winner = false;
 
-    var keepTrack = [];
+    //var keepTrack = [];
     
     console.log(boxes);
 
@@ -18,23 +18,34 @@ angular
       console.log(player1.name);
       
 
-    }
+    };
 
     $scope.fillBox = function(obj){
       console.log(obj);
+
+
+
+
       var dataValue = obj.srcElement.attributes.data.value;
+
+
+
+
+
+
+      
       var boxToChange = document.getElementById(dataValue);
-      boxToChange.style.backgroundColor = currentPlayer.color
+      boxToChange.style.backgroundColor = currentPlayer.color;
       // boxToChange.style.backgroundImage = "url(" + currentPlayer.img + ")";
       // boxToChange.innerHTML = currentPlayer.gamePiece
-      console.log(currentPlayer.img)
+      console.log(currentPlayer.img);
       // this.myStyle=currentPlayer.color;
 
       // currentPlayer = new Player();
       // console.log(currentPlayer)
       switchPlayer();
 
-    }
+    };
 
     function switchPlayer(){
       if (currentPlayer == player1){
@@ -46,7 +57,7 @@ angular
     }
 
     
-  }])
+  }]);
 
 
 
