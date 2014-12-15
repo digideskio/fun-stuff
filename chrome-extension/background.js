@@ -15,7 +15,6 @@ if (host === "stackoverflow.com" || host === "www.stackoverflow.com"){
 
 //hide YouTube comments
 if (host === "www.youtube.com" || host === "youtube.com"){
-  alert("youtube true");
   hideYouTubeComments();
 }
 
@@ -39,5 +38,5 @@ function stackOverflowEnhance(){
 }
 
 function hideYouTubeComments(){
-  $("body").css({"background-color":"black"});
+  $("#watch-discussion").hide();
 }
