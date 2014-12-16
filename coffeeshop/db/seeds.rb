@@ -5,6 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-beans = Bean.create([{name:"Stanley's Blend",roast:"light",origin:"Taiwan",quantity:1.0},
-                     {name:"Glenn's Bomb Ass Coffee",roast:"dark",origin:"Africa",quantity:1.0}])
+beans = Bean.create([
+        {name: "Micah's Bold Beard Blend", roast: "dark", origin: "Syracuse", quantity: 100},
+        {name: "Shawn's Mustache Mayhem Blend", roast: "hella strong", origin: "Texas", quantity: 101}
+      ])

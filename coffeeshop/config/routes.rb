@@ -1,17 +1,6 @@
 Rails.application.routes.draw do
 
-  get "beans/"         => "beans#index"
-  get "beans/new"      => "beans#new",  as: :new_bean
-  get "beans/:id"      => "beans#show", as: :bean
-  get "beans/:id/edit" => "beans#edit", as: :edit_bean
-
-  post "beans/"        => "beans#create"
-  
-  patch "beans/:id"    => "beans#update"
-
-  delete "beans/:id"   => "beans#destroy"
-
-  # resources :beans
+  get "beans/" => "beans#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
