@@ -1,0 +1,44 @@
+app = angular.module('mashup',[
+  "templates",
+  "ngRoute"
+  ])
+  .config(["$routeProvider","$locationProvider", function($routeProvider,$locationProvider){
+    //template is in app/javascripts/templates
+    $routeProvider
+      .when('/',{
+        templateUrl:"index.html",
+        controller:"MashupController"
+      });
+  }])
+  .controller("MashupController",["$scope","$http", "$routeParams","$location", 
+    function($scope,$http,$routeParams,$location){
+
+      //declare $scope.posts to be Post.all array on 200 Ok response
+      $http.get('../posts')
+                .success(function(response){
+                  $scope.posts = response
+                  console.log($scope.posts)
+                })
+
+      $scope.banner={
+        image: getBannerImage()
+      }
+
+      function getBannerImage(){
+        //this stuff is hard-coded, which may be bad-form, but YOLO.
+        //returns a random selection from an array of images in 
+        //app/assets/images. file was saved as *js.erb in order to 
+        //utilize the asset pipeline
+        //May need to refactor this for production deployment.
+        var photos = ["<%= asset_path ('chessboard.jpg' )%>",
+                      "<%= asset_path ('lanterns.jpg' )%>",
+                      "<%= asset_path ('pine-cone.jpg' )%>",
+                      "<%= asset_path ('hanoi.jpg' )%>",
+                      "<%= asset_path ('trolley.jpg' )%>",
+                      "<%= asset_path ('wheel.jpg' )%>",
+                      "<%= asset_path ('willow.jpg' )%>"
+        ];
+
+        return photos[Math.floor(Math.random()*photos.length)]
+      }
+    }])
