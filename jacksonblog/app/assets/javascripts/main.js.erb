@@ -24,6 +24,13 @@ app = angular.module('mashup',[
         image: getBannerImage()
       }
 
+      $scope.generate=function(){
+        console.log("generate function working!!!")
+        //manipulate json into paragraphs
+        //need to accept a parameter to vary number of paragraphs. should have a default value
+        
+      }
+
       function getBannerImage(){
         //this stuff is hard-coded, which may be bad-form, but YOLO.
         //returns a random selection from an array of images in 
