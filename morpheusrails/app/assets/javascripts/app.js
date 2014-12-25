@@ -13,10 +13,25 @@ app=angular.module("morp",["ngRoute","templates"])
 
     //initialize quote to empty string to have empty textarea
     $scope.quote = ""
+    $scope.numberOfParagraphs = 1
+
 
     //gets random quote
-    $scope.getQuote = function(){
-      $scope.quote = selectQuoteFromModel();
+    $scope.getQuote = function(numParagraphs){
+      //if numParagraphs comes through as blank I want it to initialize as 1
+      //using + operator to convert string to num which will return NaN if not a num.
+      //client-side validation???
+      numParagraphs = (isNaN(+numParagraphs)) ? 1 : numParagraphs;
+      
+      //if numParagraphs is greater than 5 return a max of 5.
+      numParagraphs = numParagraphs > 5 ? 5 : numParagraphs;
+      console.log(numParagraphs);
+
+      if (numParagraphs === 1){
+        $scope.quote = selectQuoteFromModel()
+      }else{
+        console.log("num paragraphs is " + numParagraphs)
+      }
     }
 
     function selectQuoteFromModel(){

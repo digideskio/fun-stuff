@@ -3,13 +3,15 @@
 <div class="container">
   <section>
     <div id="quote" ng-if="generated"></div>
+    
+    <input ng-model="numberOfParagraphs"></input>
+    <p>No. of paragraphs: {{numberOfParagraphs}}</p>
     <p>
-    <button class="btn btn-success" ng-click="getQuote()">Generate!</button>
+    <button class="btn btn-success" ng-click="getQuote(numberOfParagraphs)">Generate!</button>
     </p>
 
     <textarea class="form-control" rows="3" onfocus="this.select()">{{quote}}</textarea>
   </section>
 </div>  
 
-<!-- //put the text in the textbox
-//make a function that combines with ng-click to populate the box -->
+<!-- pass number of paragraphs to function -->
