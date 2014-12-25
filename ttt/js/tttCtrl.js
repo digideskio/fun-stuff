@@ -23,17 +23,8 @@ angular
     $scope.fillBox = function(obj){
       console.log(obj);
 
-
-
-
       var dataValue = obj.srcElement.attributes.data.value;
 
-
-
-
-
-
-      
       var boxToChange = document.getElementById(dataValue);
       boxToChange.style.backgroundColor = currentPlayer.color;
       // boxToChange.style.backgroundImage = "url(" + currentPlayer.img + ")";
