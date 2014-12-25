@@ -11,10 +11,15 @@ app=angular.module("morp",["ngRoute","templates"])
   .controller("morpheusController",["$scope","$http",function($scope,$http){
     $scope.glenn="hey babay"
 
-    $scope.quote=getQuote()
+    //initialize quote to empty string to have empty textarea
+    $scope.quote = ""
 
+    //gets random quote
+    $scope.getQuote = function(){
+      $scope.quote = selectQuoteFromModel();
+    }
 
-    function getQuote(){
+    function selectQuoteFromModel(){
       return quotes[Math.floor(Math.random()*quotes.length)]
     }
   }])
