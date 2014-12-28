@@ -1,16 +1,25 @@
-<h1>Morpheus Ipsum</h1>
+<h1 style="background-color:green;color:white;">Morpheus Ipsum</h1>
+<hr/>
 
-<div class="container">
-  <section>
-    <div id="quote" ng-if="generated"></div>
+<div class="container" >
+  <section class="row">
     
-    <input ng-model="numberOfParagraphs"></input>
-    <p>No. of paragraphs: {{numberOfParagraphs}}</p>
-    <p>
-    <button class="btn btn-success" ng-click="getQuote(numberOfParagraphs)">Generate!</button>
-    </p>
+    <div class="col-md-5">
 
-    <textarea class="form-control" rows="3" onfocus="this.select()">{{quote}}</textarea>
+      <input ng-model="numberOfParagraphs"></input>
+      <p>No. of paragraphs: {{numberOfParagraphs}}</p>
+      <p>
+      <button class="btn btn-danger" ng-click="getQuote(numberOfParagraphs)">Generate!</button>
+      </p>
+
+      <textarea class="form-control" rows="9" onfocus="this.select()">{{quote}}</textarea>
+
+
+    </div>
+
+
+
+
   </section>
 </div>  
 

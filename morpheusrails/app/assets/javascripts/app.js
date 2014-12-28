@@ -38,13 +38,20 @@ app=angular.module("morp",["ngRoute","templates"])
       if (numParagraphs === 1){
         $scope.quote = quotesFromJson[0].text
       }else{
-        for(i=0;i<=numParagraphs;i+=1)
-          console.log(numParagraphs + "generated")
+        $scope.quote = buildParagraphs(numParagraphs);
       }
-      //refresh the array
-      
+
     }//end getQuote function
 
+    function buildParagraphs(numParagraphs){
+      var completedSentence = "";
+      for(var j=0;j<numParagraphs;j++){
+        completedSentence += quotesFromJson[j].text + "\r\r"
+        console.log(completedSentence);
+      }
+      return completedSentence;
+    }//end buildParagraphs
+    
   }])
 
       // var quotes = ["I've been watching you, Neo, and I want to meet you.  I don't know if you're ready to see what I want to show you, but unfortunately, we have run out of time.  They're coming for you, Neo.  And I'm not sure what they're going to do.",
