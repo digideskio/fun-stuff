@@ -1,3 +1,48 @@
-/*#textarea{
-  font-family: 'Arimo', sans-serif;
+@font-face{
+  font-family: "matrix";
+  src: url('/fonts/matrix.ttf') format('truetype');
+}
+
+header{
+  background-color: green;
+  color:white; 
+  font-family:matrix; 
+  font-size:144px;
+  text-align:center;
+  -webkit-text-stroke: 3px black;
+}
+/*inner-matrix{
+  font-family: monospace;
 }*/
+
+#paragraphs{
+  color:black;
+}
+
+#quotes{
+  font-family: monospace;
+}
+
+#span-left{
+  float:left;
+}
+#span-right{
+  float:right;
+}
+
+::selection{
+  background-color: green;
+  color:white;
+}
+
+::-moz-selection{
+  background-color: green;
+  color:white;
+}
+
+
+/*.matrix{
+  font-family: "matrix"
+
+}*/
+/*Got the matrix font here: http://www.dafont.com/matrix.font*/

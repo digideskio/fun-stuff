@@ -1,26 +1,31 @@
-<h1 style="background-color:green;color:white;">Morpheus Ipsum</h1>
+<div class="container">
+  <span id="span-left">Red pill, or blue?</span>
+  <span id="span-right">Like | Share
+</div>
+
+<header>Morpheus Ipsum</header>
+
 <hr/>
 
-<div class="container" >
+<div class="container" id="inner-matrix" >
   <section class="row">
     
     <div class="col-md-5">
 
-      <input ng-model="numberOfParagraphs"></input>
-      <p>No. of paragraphs: {{numberOfParagraphs}}</p>
+      <input ng-model="numberOfParagraphs" id="paragraphs"></input>
+      <p style="font-family:'monospace';">No. of paragraphs: {{numberOfParagraphs}}</p>
       <p>
       <button class="btn btn-danger" ng-click="getQuote(numberOfParagraphs)">Generate!</button>
       </p>
 
-      <textarea class="form-control" rows="9" onfocus="this.select()">{{quote}}</textarea>
+      <textarea class="form-control" id="quotes" rows="9" onfocus="this.select()">{{quote}}</textarea>
 
 
     </div>
 
-
+    <img src="../images/morpheus.jpg" style="max-width:100%;">
 
 
   </section>
 </div>  
 
-<!-- pass number of paragraphs to function -->
