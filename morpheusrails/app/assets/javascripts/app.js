@@ -43,6 +43,10 @@ app=angular.module("morp",["ngRoute","templates"])
 
     }//end getQuote function
 
+    $scope.clearQuotes = function(){
+      $scope.quote = "";
+    }
+
     function buildParagraphs(numParagraphs){
       var completedSentence = "";
       for(var j=0;j<numParagraphs;j++){

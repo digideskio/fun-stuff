@@ -1,31 +1,43 @@
-<div class="container">
+<div class="container" id="like-bar">
   <span id="span-left">Red pill, or blue?</span>
-  <span id="span-right">Like | Share
+  <span id="span-right"><a href="https://twitter.com/harris_gca">Follow</a> | Share
 </div>
 
-<header>Morpheus Ipsum</header>
+<header>
+  <div class="container" id="header">Morpheus Ipsum</div>
+  <div class="container">A Morpheus-themed Lorem Ipsum generator</div>
+</header>
 
-<hr/>
-
-<div class="container" id="inner-matrix" >
+<main class="container">
   <section class="row">
     
     <div class="col-md-5">
 
-      <input ng-model="numberOfParagraphs" id="paragraphs"></input>
-      <p style="font-family:'monospace';">No. of paragraphs: {{numberOfParagraphs}}</p>
-      <p>
-      <button class="btn btn-danger" ng-click="getQuote(numberOfParagraphs)">Generate!</button>
-      </p>
+      <section id="make-choice">
+        Make Your Choice
+      </section>
 
-      <textarea class="form-control" id="quotes" rows="9" onfocus="this.select()">{{quote}}</textarea>
+      <section id="paragraph-block">
+        <span id="how-many-paragraphs">Number of paragraphs?</span>
+        <input ng-model="numberOfParagraphs" id="paragraph-selection-box"></input>
+      </section>
 
+      <section id="buttons">
+        <button class="btn btn-danger" ng-click="getQuote(numberOfParagraphs)">Take the red pill</button>
+        <button class="btn btn-primary" ng-click="clearQuotes()">Take the blue pill</button>
+      </section>
 
-    </div>
+      <section id="copy-text">
+        <p>COPY/PASTE THE CODE BELOW.</p>
+      </section>
+
+      <textarea placeholder="All I'm offering is the truth. Nothing more." class="form-control" id="quotes" rows="9" onfocus="this.select()">{{quote}}</textarea>
+
+    </div> <!-- end col-md-5 div -->
 
     <img src="../images/morpheus.jpg" style="max-width:100%;">
 
 
-  </section>
-</div>  
+  </section> <!-- end row section -->
+</main>  <!-- end container class -->
 

@@ -3,24 +3,65 @@
   src: url('/fonts/matrix.ttf') format('truetype');
 }
 
+#like-bar a{
+  color:white;
+  text-decoration: none;
+}
+
+#like-bar a:hover{
+  color:yellow;
+}
+
+#like-bar{
+  padding: 5px;
+  font-family:monospace;
+  font-weight: bold;
+}
+
 header{
   background-color: green;
   color:white; 
-  font-family:matrix; 
-  font-size:144px;
-  text-align:center;
-  -webkit-text-stroke: 3px black;
-}
-/*inner-matrix{
+  font-size:20px;
   font-family: monospace;
-}*/
+  margin:0px 0px 10px 0px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
 
-#paragraphs{
+#header{ 
+  font-family:matrix; 
+  font-size:90px;
+  margin-bottom: -30px;
+  -webkit-text-stroke: 3px black;
+
+}
+
+#paragraph-block{
+  font-weight: bold;
+  margin-bottom:15px;
+}
+
+#how-many-paragraphs{
+  font-family:'monospace';
+  font-size:17px;
+}
+
+#paragraph-selection-box{
   color:black;
+  border: solid green;
+  float:right;
+  width: 10%;
+  text-align:center;
+}
+
+#buttons{
+  text-align:center;
+  font-family: monospace;
 }
 
 #quotes{
   font-family: monospace;
+  border: solid green;
 }
 
 #span-left{
@@ -28,6 +69,21 @@ header{
 }
 #span-right{
   float:right;
+}
+
+#make-choice, #copy-text{
+  color:yellow;
+  font-weight: bold;
+  text-align: left;
+  margin:10px 10px 20px 10px;
+  font-family: monospace;
+}
+
+#make-choice{
+  font-size: 25px
+}
+#copy-text{
+  font-size: 20px;
 }
 
 ::selection{
@@ -40,9 +96,4 @@ header{
   color:white;
 }
 
-
-/*.matrix{
-  font-family: "matrix"
-
-}*/
 /*Got the matrix font here: http://www.dafont.com/matrix.font*/
