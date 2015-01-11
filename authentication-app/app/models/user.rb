@@ -6,8 +6,10 @@ class User
   attr_reader :password
 
   def password=(unencrypted_password)
-    @password = unencrypted_password
-    self.password_digest = BCrypt::Password.create(unencrypted_password)
+    unless unencrypted_password.empty?
+      @password = unencrypted_password
+      self.password_digest = BCrypt::Password.create(unencrypted_password)
+    end
   end
 
   def authenticate(unencrypted_password)
