@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   root 'users#index'
-  resources :users, only:[:index, :create]
+  resources :users
   get 'signup' => 'users#new'
 
   get '/login'     => 'sessions#new'

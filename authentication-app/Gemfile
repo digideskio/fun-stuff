@@ -28,6 +28,12 @@ gem 'mongoid'
 gem 'bcrypt'
 gem 'better_errors'
 gem 'pry-rails'
+
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
+gem 'fog'
+gem 'mini_magick'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
