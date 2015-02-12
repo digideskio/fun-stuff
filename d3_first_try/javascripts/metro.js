@@ -7,4 +7,4 @@ var json = d3.json("http://api.metro.net/agencies/lametro/routes/",
     //json is the returned data
   });
 
-console.log(json);
+console.log(json); 
